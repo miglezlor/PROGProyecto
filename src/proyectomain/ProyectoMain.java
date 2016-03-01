@@ -1,5 +1,6 @@
 package proyectomain;
 
+import datos_pokemon.*;
 /**
  *
  * @author mgonzalezlorenzo
@@ -8,7 +9,8 @@ public class ProyectoMain {
 
     
     public static void main(String[] args) {
-        // TODO code application logic here
+//        Pokedex x = new Pokedex();
+//        x.iniciar();
     }
     
 }

@@ -70,7 +70,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon{" + "nombre=" + nombre + ", mov1=" + mov1 + ", mov2=" + mov2 + ", mov3=" + mov3 + ", mov4=" + mov4 + ", vida=" + vida + '}';
+        return "{" + "nombre=" + nombre + ", mov1=" + mov1 + ", mov2=" + mov2 + ", mov3=" + mov3 + ", mov4=" + mov4 + ", vida=" + vida + '}';
     }
     
     
