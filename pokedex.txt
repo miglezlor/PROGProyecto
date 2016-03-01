@@ -1,0 +1,5 @@
+{nombre=Charmander, mov1=Ascuas, mov2=Arañazo, mov3=Corte, mov4=Excavar, vida=50}
+{nombre=Squirtle, mov1=Burbuja, mov2=Pistola Agua, mov3=Placaje, mov4=Golpe Roca, vida=50}
+{nombre=Bulbasaur, mov1=Latigo Cepa, mov2=Hoja Afilada, mov3=Placaje, mov4=Corte, vida=50}
+{nombre=Pikachu, mov1=Rayo, mov2=Ataque Rapido, mov3=Placaje Electrico, mov4=Portazo, vida=50}
+{nombre=Rattata, mov1=Placaje, mov2=Hip. Colmillo, mov3=Arañazo, mov4=Golpe Cabeza, vida=50}

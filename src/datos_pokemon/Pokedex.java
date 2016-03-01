@@ -15,7 +15,7 @@ public class Pokedex {
     public void iniciar(){
         lista.add(new Pokemon("Charmander","Ascuas","Arañazo","Corte","Excavar",50));
         lista.add(new Pokemon("Squirtle","Burbuja","Pistola Agua","Placaje","Golpe Roca",50));
-        lista.add(new Pokemon("Bulbasur","Latigo Cepa","Hoja Afilada","Placaje","Corte",50));
+        lista.add(new Pokemon("Bulbasaur","Latigo Cepa","Hoja Afilada","Placaje","Corte",50));
         lista.add(new Pokemon("Pikachu","Rayo","Ataque Rapido","Placaje Electrico","Portazo",50));
         lista.add(new Pokemon("Rattata","Placaje","Hip. Colmillo","Arañazo","Golpe Cabeza",50));
         
