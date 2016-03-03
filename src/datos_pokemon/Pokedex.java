@@ -1,9 +1,8 @@
 package datos_pokemon;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -11,30 +10,44 @@ import java.util.ArrayList;
  */
 public class Pokedex {
     ArrayList <Pokemon> lista = new ArrayList();
+    public Pokemon pokemon1;
+    public Pokemon pokemon2;
     
     public void iniciar(){
-        lista.add(new Pokemon("Charmander","Ascuas","Arañazo","Corte","Excavar",50));
-        lista.add(new Pokemon("Squirtle","Burbuja","Pistola Agua","Placaje","Golpe Roca",50));
-        lista.add(new Pokemon("Bulbasaur","Latigo Cepa","Hoja Afilada","Placaje","Corte",50));
-        lista.add(new Pokemon("Pikachu","Rayo","Ataque Rapido","Placaje Electrico","Portazo",50));
-        lista.add(new Pokemon("Rattata","Placaje","Hip. Colmillo","Arañazo","Golpe Cabeza",50));
+        Pokemon charmander = new Pokemon("Charmander",100,"Arañazo");
+        Pokemon squirtle = new Pokemon("Squirtle",120,"Placaje");
         
-        File f = new File("pokedex.txt");
-        PrintWriter escribir=null;
-        try {
-            
-            escribir = new PrintWriter(f);
-            for(int i=0;i<lista.size();i++){
-                
-                escribir.println(lista.get(i));
-            }
-        } 
-        catch (FileNotFoundException ex) {
-            System.out.println("Erro escritura "+ex.getMessage());
-        }
-        finally{
-            escribir.close();
-        }
+        lista.add(squirtle);
+        lista.add(charmander);
+        
     }
+    
+    public void elegir(){
+        int opcion;
+        
+            
+            opcion=Integer.parseInt(JOptionPane.showInputDialog("Jugador 1 elige: \n 1. Charmander. \n 2. Squirtle."));
+            
+            switch(opcion){
+                case 1 : pokemon1=lista.get(opcion-1); JOptionPane.showMessageDialog(null, "Adelante Charmander");
+                    break;
+                case 2 : pokemon1=lista.get(opcion-1); JOptionPane.showMessageDialog(null, "Adelante Squirtle");
+                    break;
+                
+            }
+            
+            opcion=Integer.parseInt(JOptionPane.showInputDialog("Jugador 2 elige: \n 1. Charmander. \n 2. Squirtle. \n 3. Salir"));
+            
+            switch(opcion){
+                case 1 : pokemon2=lista.get(opcion-1); JOptionPane.showMessageDialog(null, "Adelante Charmander");
+                    break;
+                case 2 : pokemon2=lista.get(opcion-1); JOptionPane.showMessageDialog(null, "Adelante Squirtle");
+                    break;
+                
+            }
+        
+    }
+        
+    
     
 }
