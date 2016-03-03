@@ -14,8 +14,8 @@ public class Pokedex {
     public Pokemon pokemon2;
     
     public void iniciar(){
-        Pokemon charmander = new Pokemon("Charmander",100, new Movimientos("Arañazo",30));
-        Pokemon squirtle = new Pokemon("Squirtle",120,new Movimientos("Placaje",18));
+        Pokemon charmander = new Pokemon("Charmander",100, new Movimientos("Arañazo",30), new Movimientos("Ascuas",20));
+        Pokemon squirtle = new Pokemon("Squirtle",120,new Movimientos("Placaje",18), new Movimientos("Pistola Agua", 36));
         
         lista.add(charmander);
         lista.add(squirtle);

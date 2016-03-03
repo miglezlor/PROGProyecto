@@ -7,15 +7,16 @@ package datos_pokemon;
 public class Pokemon {
     private String nombre;
     private int vida;
-    private Movimientos mov;
+    private Movimientos mov1,mov2;
 
     public Pokemon() {
     }
 
-    public Pokemon(String nombre, int vida, Movimientos mov) {
+    public Pokemon(String nombre, int vida, Movimientos mov1, Movimientos mov2) {
         this.nombre = nombre;
         this.vida = vida;
-        this.mov = mov;
+        this.mov1 = mov1;
+        this.mov2 = mov2;
     }
 
     public String getNombre() {
@@ -34,18 +35,28 @@ public class Pokemon {
         this.vida = vida;
     }
 
-    public Movimientos getMov() {
-        return mov;
+    public Movimientos getMov1() {
+        return mov1;
     }
 
-    public void setMov(Movimientos mov) {
-        this.mov = mov;
+    public void setMov(Movimientos mov1) {
+        this.mov1 = mov1;
+    }
+    
+    public Movimientos getMov2() {
+        return mov2;
+    }
+
+    public void setMov2(Movimientos mov2) {
+        this.mov2 = mov2;
     }
 
     @Override
     public String toString() {
-        return "Pokemon{" + "nombre=" + nombre + ", vida=" + vida + ", mov=" + mov + '}';
+        return "Pokemon{" + "nombre=" + nombre + ", vida=" + vida + ", mov1=" + mov1 + ", mov2=" + mov2 + '}';
     }
+    
+    
 
     
     
