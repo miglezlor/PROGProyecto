@@ -7,12 +7,12 @@ package datos_pokemon;
 public class Pokemon {
     private String nombre;
     private int vida;
-    private String mov;
+    private Movimientos mov;
 
     public Pokemon() {
     }
 
-    public Pokemon(String nombre, int vida, String mov) {
+    public Pokemon(String nombre, int vida, Movimientos mov) {
         this.nombre = nombre;
         this.vida = vida;
         this.mov = mov;
@@ -34,11 +34,11 @@ public class Pokemon {
         this.vida = vida;
     }
 
-    public String getMov() {
+    public Movimientos getMov() {
         return mov;
     }
 
-    public void setMov(String mov) {
+    public void setMov(Movimientos mov) {
         this.mov = mov;
     }
 
@@ -46,6 +46,8 @@ public class Pokemon {
     public String toString() {
         return "Pokemon{" + "nombre=" + nombre + ", vida=" + vida + ", mov=" + mov + '}';
     }
+
+    
     
     
     
