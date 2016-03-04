@@ -14,7 +14,7 @@ public class Movimientos {
 
     public Movimientos(String nomMov, int dano) {
         this.nomMov = nomMov;
-        this.dano = dano;
+        this.dano = dano;    
     }
 
     public String getNomMov() {
@@ -37,6 +37,6 @@ public class Movimientos {
     public String toString() {
         return "Movimientos{" + "nomMov=" + nomMov + ", dano=" + dano + '}';
     }
-    
+
     
 }
