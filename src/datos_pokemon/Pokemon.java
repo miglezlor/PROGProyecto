@@ -2,7 +2,7 @@ package datos_pokemon;
 
 /**
  *
- * @author mgonzalezlorenzo & agomezcastro
+ *  @author mgonzalezlorenzo & agomezcastro
  */
 public class Pokemon {
     private String nombre;
