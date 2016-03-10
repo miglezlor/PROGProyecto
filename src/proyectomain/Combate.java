@@ -84,7 +84,7 @@ public class Combate {
                 break;
         }
         
-        System.out.println(obj.pokemon1.getNombre()+" :"+obj.pokemon1.getVida()+" ----------- "+obj.pokemon2.getNombre()+" :"+obj.pokemon2.getVida());
+        System.out.println(obj.pokemon1.getNombre()+" tiene :"+obj.pokemon1.getVida()+" PV"+" ----------- "+obj.pokemon2.getNombre()+" tiene :"+obj.pokemon2.getVida()+" PV");
         
         if(vida1<=0 | vida2<=0){
             fin=true;
