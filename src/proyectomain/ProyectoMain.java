@@ -1,6 +1,6 @@
 package proyectomain;
 
-import datos_pokemon.*;
+
 /**
  *
  * @author mgonzalezlorenzo

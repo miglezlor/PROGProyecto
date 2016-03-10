@@ -12,8 +12,11 @@ import javax.swing.JOptionPane;
  * @author mgonzalezlorenzo
  */
 public class Combate {
-    
+    public String tipomov,tiporival;
     Pokedex obj = new Pokedex();
+    Tipos efect = new Tipos();
+    Movimientos mov = new Movimientos();
+    Pokemon pok = new Pokemon();
     
     public void elegir(){
         
@@ -30,18 +33,54 @@ public class Combate {
         do{
         opcion=Integer.parseInt(JOptionPane.showInputDialog("Que debe hacer "+obj.pokemon1.getNombre()+" ? \n 1. "+(obj.pokemon1.getMov1().getNomMov())+" \n 2. "+(obj.pokemon1.getMov2().getNomMov())));
         
+        
+        
+        
+        
         switch(opcion){
-            case 1 : vida2=vida2-obj.pokemon1.getMov1().getDano() ; obj.pokemon2.setVida(vida2); System.out.println(obj.pokemon1.getNombre()+" uso "+obj.pokemon1.getMov1().getNomMov());
+            
+            case 1 : 
+                tipomov=obj.pokemon1.getMov1().getTipmov().getNomTip();
+                tiporival=obj.pokemon2.getTippok().getNomTip();
+                int mult1=efectividad();
+                
+                vida2=vida2-obj.pokemon1.getMov1().getDano()*mult1 ; 
+                obj.pokemon2.setVida(vida2); 
+                System.out.println(obj.pokemon1.getNombre()+" uso "+obj.pokemon1.getMov1().getNomMov());
                 break;
-            case 2: vida2=vida2-obj.pokemon1.getMov2().getDano() ; obj.pokemon2.setVida(vida2); System.out.println(obj.pokemon1.getNombre()+" uso "+obj.pokemon1.getMov2().getNomMov());
+                
+            case 2:  
+                tipomov=obj.pokemon1.getMov2().getTipmov().getNomTip();
+                tiporival=obj.pokemon2.getTippok().getNomTip();
+                int mult2=efectividad();
+                
+                vida2=vida2-obj.pokemon1.getMov2().getDano()*mult2 ; 
+                obj.pokemon2.setVida(vida2); 
+                System.out.println(obj.pokemon1.getNombre()+" uso "+obj.pokemon1.getMov2().getNomMov());
                 break;
         }
                
         opcion=Integer.parseInt(JOptionPane.showInputDialog("Que debe hacer "+obj.pokemon2.getNombre()+" ? \n 1. "+(obj.pokemon2.getMov1().getNomMov())+"\n 2. "+(obj.pokemon2.getMov2().getNomMov())));
         switch(opcion){
-            case 1 : vida1=vida1-obj.pokemon2.getMov1().getDano() ; obj.pokemon1.setVida(vida1); System.out.println(obj.pokemon2.getNombre()+" uso "+obj.pokemon2.getMov1().getNomMov());
+            case 1 : 
+                tipomov=obj.pokemon2.getMov1().getTipmov().getNomTip();
+                tiporival=obj.pokemon1.getTippok().getNomTip();
+                int mult1=efectividad();
+                
+                
+                vida1=vida1-obj.pokemon2.getMov1().getDano()*mult1 ; 
+                obj.pokemon1.setVida(vida1); 
+                System.out.println(obj.pokemon2.getNombre()+" uso "+obj.pokemon2.getMov1().getNomMov());
                 break;
-            case 2: vida1=vida1-obj.pokemon2.getMov2().getDano() ; obj.pokemon1.setVida(vida1); System.out.println(obj.pokemon2.getNombre()+" uso "+obj.pokemon2.getMov2().getNomMov());
+            case 2:
+                tipomov=obj.pokemon2.getMov2().getTipmov().getNomTip();
+                tiporival=obj.pokemon1.getTippok().getNomTip();
+                int mult2=efectividad();
+                
+                
+                vida1=vida1-obj.pokemon2.getMov2().getDano()*mult2 ; 
+                obj.pokemon1.setVida(vida1); 
+                System.out.println(obj.pokemon2.getNombre()+" uso "+obj.pokemon2.getMov2().getNomMov());
                 break;
         }
         
@@ -119,6 +158,48 @@ public class Combate {
         }
         }while(fin==false);
         }
+    public int efectividad(){
+        if(tipomov.equals("Fuego")){
+            if(tiporival.equals("Planta")){
+                efect.setMult(2);
+            }
+            else{
+                efect.setMult(1);
+            }
+        }
+        else if(tipomov.equals("Agua")){
+            if(tiporival.equals("Fuego")){
+                efect.setMult(2);
+            }
+            
+            else{
+                efect.setMult(1);
+            }
+        }
+        else if(tipomov.equals("Planta")){
+            if(tiporival.equals("Agua")){
+                efect.setMult(2);
+            }
+            else{
+                efect.setMult(1);
+            }
+        }
+        else if(tipomov.equals("Volador")){
+            if(tiporival.equals("Planta")){
+                efect.setMult(2);
+            }
+            else{
+                efect.setMult(1);
+            }
+        }
+        else{
+            efect.setMult(1);
+        }
+        
+        
+            return efect.getMult();
+        }
+        
     }
 
         

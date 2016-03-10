@@ -8,13 +8,15 @@ public class Movimientos {
     
     private String nomMov;
     private int dano;
+    private Tipos tipmov;
 
     public Movimientos() {
     }
 
-    public Movimientos(String nomMov, int dano) {
+    public Movimientos(String nomMov, int dano, Tipos tipmov) {
         this.nomMov = nomMov;
-        this.dano = dano;    
+        this.dano = dano;
+        this.tipmov = tipmov;
     }
 
     public String getNomMov() {
@@ -33,10 +35,20 @@ public class Movimientos {
         this.dano = dano;
     }
 
+    public Tipos getTipmov() {
+        return tipmov;
+    }
+
+    public void setTipmov(Tipos tipmov) {
+        this.tipmov = tipmov;
+    }
+
     @Override
     public String toString() {
-        return "Movimientos{" + "nomMov=" + nomMov + ", dano=" + dano + '}';
+        return "Movimientos{" + "nomMov=" + nomMov + ", dano=" + dano + ", tipmov=" + tipmov + '}';
     }
+    
+    
 
     
 }
