@@ -7,8 +7,7 @@ package datos_pokemon;
 public class Tipos {
     private String nomTip;
     private int mult;
-    Pokedex obj = new Pokedex();
-    Movimientos mov = new Movimientos();
+    
     
     
     public Tipos() {

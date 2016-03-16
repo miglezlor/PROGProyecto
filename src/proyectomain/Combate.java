@@ -157,7 +157,7 @@ public class Combate {
         
         }
         }while(fin==false);
-        }
+    }
     public int efectividad(){
         if(tipomov.equals("Fuego")){
             if(tiporival.equals("Planta")){
