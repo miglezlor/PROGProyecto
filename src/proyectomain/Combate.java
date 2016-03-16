@@ -54,7 +54,7 @@ public class Combate {
                 tiporival=obj.pokemon2.getTippok().getNomTip();
                 int mult2=efectividad();
                 
-                vida2=vida2-obj.pokemon1.getMov2().getDano()*mult2 ; 
+                vida2= vida2-obj.pokemon1.getMov2().getDano()*mult2 ; 
                 obj.pokemon2.setVida(vida2); 
                 System.out.println(obj.pokemon1.getNombre()+" uso "+obj.pokemon1.getMov2().getNomMov());
                 break;
